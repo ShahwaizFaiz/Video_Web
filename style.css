@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.mainCont {
+    overflow-x: hidden; 
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(248, 246, 243);
+}
+
+.mainData {
+    overflow-y: scroll;
+
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px black;
+    position: absolute;
+    width: 90%;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+}
+
+.navbar {
+    font-size: 18px;
+    font-size: 600;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    /* margin: 15px; */
+    padding: 12px;
+}
+
+.navList ul {
+    gap: 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.item::after,
+h1::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.item:hover,
+h1:hover {
+    color: rgb(224, 193, 55);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.item:hover::after,
+h1:hover::after {
+    width: 100%;
+}
+
+.fa-bars,
+.fa-xmark {
+    display: none;
+    font-size: 24px;
+}
+
+.fa-bars:hover {
+    color: rgb(224, 193, 55);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.iframe{
+    margin: 20px;
+    display: flex;
+    flex-direction   : row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    gap: 10px;
+}
+.video iframe{
+    outline: none;
+    border-radius: 5px;
+}
+
+.video iframe:hover{
+    outline: none;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    padding: 2px;
+    transition: 0.3s;
+}
+@media (max-width:650px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 12px 25px;
+    }
+
+    .navList {
+        background-color:rgb(65, 63, 63);
+        position: absolute;
+        width: 300px;
+        right: -350px;
+        border-radius: 0px 15px 15px 0px;
+        transition: 1s;
+        height: 100%;
+        top: 0px;
+
+    }
+
+    .navList ul,
+    .fa-xmark {
+        display: block;
+        position: absolute;
+    }
+   
+    .item {
+        margin-left: 300px;
+    }
+
+    .cross{
+        top: -30px;
+        left: -20px;
+        position: absolute;
+        width: 0%;
+        margin-left: 0px;
+    }
+    .cross:hover{
+        color:rgb(224, 193, 55) ;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .navList ul li {
+        margin: 35px;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+}
